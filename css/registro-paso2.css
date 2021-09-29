@@ -20,6 +20,11 @@
 /************** Custom Properties ***************/
 
 /************** Registro paso 2 version mobile - start ***************/
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #031d44;
+}
 .container {
   padding: 0px;
 }
