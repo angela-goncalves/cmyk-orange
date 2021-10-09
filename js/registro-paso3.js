@@ -20,6 +20,5 @@ select.addEventListener("change", (e) => {
   li.textContent = option;
   li.classList.add("tags");
   li.appendChild(btnX);
-  console.log(e.target.value);
   deleteTag(btnX, li);
 });
