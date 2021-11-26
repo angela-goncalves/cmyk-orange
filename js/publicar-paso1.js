@@ -34,8 +34,6 @@ formBtn.addEventListener("click", (e) => {
     uid: usuario.uid,
   };
 
-  console.log(project);
-
   localStorage.setItem("projects", JSON.stringify(project));
 
   formProject.reset();

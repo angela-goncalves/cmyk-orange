@@ -42,11 +42,9 @@ registrationForm.addEventListener("submit", (e) => {
   auth.onAuthStateChanged((user) => {
     if (user) {
       alert("ya estas tenés la cuenta creada");
-      console.log("user is sign in");
       window.location.assign(`../index.html`);
     } else {
       isSamePassword(userPassword, repeatePassword, userEmail);
-      console.log("No user is sign in");
     }
   });
 });

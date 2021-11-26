@@ -19,12 +19,10 @@ signInForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
-  console.log(email, password);
   auth
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       signInForm.reset();
-      console.log("sign in");
       window.location.assign(`/index.html`);
     })
     .catch((e) => {
@@ -41,11 +39,10 @@ googleButton.addEventListener("click", (e) => {
     .signInWithPopup(provider)
     .then((result) => {
       signInForm.reset();
-      console.log("google sign in");
       window.location.assign(`/index.html`);
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
     });
 });
 
@@ -54,7 +51,6 @@ const sinCuenta = document.querySelector("#sin-cuenta");
 
 sinCuenta.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("No tengo cuenta aún");
   window.location.assign(`componentes/registroPaso1.html`);
 });
 

@@ -27,12 +27,11 @@ formBtnPubp2.addEventListener("click", async (e) => {
     const project = JSON.parse(localStorage.getItem("projects"));
     project.linksProject = linksProject;
 
-    console.log(project);
     await db.collection("Projects").add(project);
 
     window.location.assign(`pubExitosa.html`);
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 });
 

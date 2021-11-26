@@ -23,7 +23,6 @@ registrationForm.addEventListener("submit", (e) => {
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
   const repeatepassword = document.querySelector("#repeatepassword").value;
-  console.log(name1);
   if (password === repeatepassword) {
     auth
       .createUserWithEmailAndPassword(email, password)
@@ -43,7 +42,7 @@ registrationForm.addEventListener("submit", (e) => {
         window.location.assign(`registro-paso2.html`);
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
       });
   } else {
     alert("Las contraseñas deben ser las mismas");
@@ -59,11 +58,10 @@ googleButton.addEventListener("click", (e) => {
     .signInWithPopup(provider)
     .then((result) => {
       registrationForm.reset();
-      console.log("google sign in");
       window.location.assign(`registro-paso2.html`);
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
     });
 });
 

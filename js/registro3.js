@@ -35,7 +35,6 @@ select.addEventListener("change", (e) => {
   li.textContent = option;
   li.classList.add("tags");
   li.appendChild(btnX);
-  //console.log(e.target.value);
   deleteTag(btnX, li);
 });
 
@@ -72,14 +71,11 @@ btnSubmit.addEventListener("click", async (e) => {
   liTags.forEach((li) => {
     const tag = li.textContent.slice(0, li.textContent.length - 1);
     tags.push(tag);
-    console.log(tag);
   });
 
   const usuario = JSON.parse(localStorage.getItem("user"));
   usuario.tags = tags;
   usuario.redesUsuario = redesUsuario;
-
-  console.log(usuario);
 
   await db.collection("Users").doc(usuario.uid).set(usuario);
 

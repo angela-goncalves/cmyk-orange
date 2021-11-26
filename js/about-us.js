@@ -102,7 +102,6 @@ firebase.auth().onAuthStateChanged((user) => {
     const logout = document.querySelector(".logout");
     logout.innerHTML = "Cerrar Sesion";
     var uid = user.uid;
-    console.log(uid);
   } else {
     logout.innerHTML = "Iniciar Sesión";
   }
@@ -114,7 +113,6 @@ firebase.auth().onAuthStateChanged((user) => {
     const logout2 = document.querySelector(".logout2");
     logout2.innerHTML = "Cerrar Sesion";
     var uid = user.uid;
-    console.log(uid);
   } else {
     logout.innerHTML = "Iniciar Sesión";
   }

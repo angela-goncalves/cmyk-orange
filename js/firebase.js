@@ -14,7 +14,6 @@ const auth = firebase.auth();
 
 const projects = async () => {
   const res = await db.collection("project").doc("OPGE5WRuwZhNMiSGQoCw").get();
-  console.log(res.data());
   return res.data();
 };
 projects();
@@ -72,7 +71,6 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     logout.innerHTML = "Cerrar Sesion";
     var uid = user.uid;
-    console.log(uid);
   }
 });
 
@@ -82,19 +80,5 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     logout2.innerHTML = "Cerrar Sesion";
     var uid = user.uid;
-    console.log(uid);
   }
 });
-
-//Logout
-
-//
-// auth.onAuthStateChanged((user) => {
-//   if (user) {
-//     console.log("usuario activo");
-//   } else {
-//     console.log("usuario inactivo");
-//   }
-// });
-
-//al hacer logout borrar del localstore

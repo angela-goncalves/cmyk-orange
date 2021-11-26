@@ -23,8 +23,6 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   const usuario = JSON.parse(localStorage.getItem("user"));
-  console.log("uploadPhoto");
-  console.log("aboutMe");
   usuario.userPhoto = uploadPhoto;
   usuario.aboutMe = aboutMe.value;
 
